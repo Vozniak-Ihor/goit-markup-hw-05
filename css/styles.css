@@ -167,7 +167,7 @@ body {
   padding-top: 192px;
   padding-bottom: 192px;
   text-align: center;
-  max-width: 1440px;
+  max-width: 1600px;
   margin-right: auto;
   margin-left: auto;
   background-image: linear-gradient(
@@ -261,16 +261,15 @@ body {
   gap: 24px;
 }
 
-.advantages-list::before {
+.icon {
   display: block;
-  content: " ";
+  display: flex;
+  margin-bottom: 8px;
   height: 112px;
-  width: 264px;
+  justify-content: center;
+  align-items: center;
   background: #f4f4fd;
   border-radius: 4px;
-  background-image: url(../img/strategy.svg);
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .advantages-item {
@@ -413,6 +412,36 @@ body {
   font-size: 20px;
   list-style: 1.2;
   letter-spacing: 0.02em;
+}
+
+/* Customers */
+
+.Customers {
+}
+
+.Customers-conteiner {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.Customers-title {
+  margin-bottom: 72px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+  line-height: 42px;
+  letter-spacing: 0.03em;
+  color: var(--title--text-color);
+}
+.Customers-list {
+  display: flex;
+  gap: 24px;
+}
+.Customers-item {
 }
 
 /* FOOTER */
