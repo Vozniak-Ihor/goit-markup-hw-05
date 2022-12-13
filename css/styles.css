@@ -79,7 +79,7 @@ body {
 /* HEADER */
 
 .Portfolio-header {
-  border-bottom: 1.5px solid rgba(142, 143, 153, 0.2);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .header-conteiner {
@@ -136,6 +136,10 @@ body {
   display: flex;
   gap: 40px;
   margin-left: auto;
+}
+
+.contacts-link-mail::before{
+ background-image: url(./img/envelop.svg);
 }
 
 .contacts .contacts-link {
@@ -227,6 +231,7 @@ body {
 .page-buttons:focus {
   background-color: var(--accent);
   color: rgb(255, 255, 255);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .page-button {
@@ -247,6 +252,7 @@ body {
 .page-button:hover,
 .page-button:focus {
   background-color: #404bbf;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* advantages */
@@ -397,6 +403,8 @@ body {
 .team-item {
   background-color: #fff;
   text-align: center;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+border-radius: 0px 0px 4px 4px
 }
 
 .team-foto {
@@ -412,6 +420,32 @@ body {
   font-size: 20px;
   list-style: 1.2;
   letter-spacing: 0.02em;
+}
+
+.team-item-list {
+  display: flex;
+  gap: 24px;
+  margin-left: 16px;
+  margin-bottom: 36px;
+}
+
+.team-item-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+}
+
+.team-icon {
+  height: 16px;
+  width: 16px;
+}
+
+.item:hover{
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 /* Customers */
@@ -444,9 +478,27 @@ body {
 .Customers-item {
 }
 
+.Customers-item-link {
+  display: flex;
+  width: 168px;
+  height: 88px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+}
+
+.ll {
+}
 /* FOOTER */
 
+.conteiner-footer {
+  margin: 0 auto;
+  padding: 0px 15px;
+}
+
 .footer {
+  display: flex;
   padding-bottom: 100px;
   padding-top: 100px;
   background-color: var(--page-background-color);
@@ -484,4 +536,37 @@ body {
   font-size: var(--primary-font-size);
   line-height: var(--primary-line-height);
   letter-spacing: var(--primary-letter-spacing);
+}
+
+.footer-title {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.kkk {
+  margin-right: 120px;
+}
+
+.footer-item-list {
+  display: flex;
+  gap: 24px;
+}
+.footer-item-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+.footer-icon {
+  width: 24px;
+  height: 20px;
 }
