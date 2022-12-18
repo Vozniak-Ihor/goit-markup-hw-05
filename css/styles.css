@@ -425,7 +425,7 @@ border-radius: 0px 0px 4px 4px
 .team-item-list {
   display: flex;
   gap: 24px;
-  margin-left: 16px;
+  justify-content: center;
   margin-bottom: 36px;
 }
 
@@ -451,11 +451,11 @@ border-radius: 0px 0px 4px 4px
 /* Customers */
 
 .Customers {
+    padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .Customers-conteiner {
-  padding-top: 120px;
-  padding-bottom: 120px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -478,6 +478,10 @@ border-radius: 0px 0px 4px 4px
 .Customers-item {
 }
 
+.Customers-color{
+  fill: rgba(142, 143, 153, 1);
+}
+
 .Customers-item-link {
   display: flex;
   width: 168px;
@@ -487,12 +491,20 @@ border-radius: 0px 0px 4px 4px
   border: 1px solid #8e8f99;
   border-radius: 4px;
 }
-
-.ll {
+.Customers-color:hover,
+.Customers-color:focus,
+.Customers-item-link:hover,
+.Customers-item-link:focus{
+  fill: var(--accent);
+  border-color: var(--accent);
 }
+
+
+
 /* FOOTER */
 
 .conteiner-footer {
+  display: flex;
   margin: 0 auto;
   padding: 0px 15px;
 }
@@ -569,4 +581,8 @@ border-radius: 0px 0px 4px 4px
 .footer-icon {
   width: 24px;
   height: 20px;
+}
+
+.footer-icon-background-color:hover{
+  background: rgba(49, 208, 170, 1);
 }
