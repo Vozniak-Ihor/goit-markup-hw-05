@@ -79,7 +79,8 @@ body {
 /* HEADER */
 
 .Portfolio-header {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .header-conteiner {
@@ -131,6 +132,38 @@ body {
   letter-spacing: var(--primary-letter-spacing);
 }
 
+.nav-link-Studio {
+  position: relative;
+}
+
+.nav-link-Studio::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 48px;
+  height: 4px;
+  background-color: var(--accent);
+  border-radius: 2px;
+}
+
+.nav-link-Portfolio {
+  position: relative;
+}
+
+.nav-link-Portfolio::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 65px;
+  height: 4px;
+  background-color: var(--accent);
+  border-radius: 2px;
+}
+
 /* contacts */
 .contacts {
   display: flex;
@@ -138,8 +171,8 @@ body {
   margin-left: auto;
 }
 
-.contacts-link-mail::before{
- background-image: url(./img/envelop.svg);
+.contacts-link-mail::before {
+  background-image: url(./img/envelop.svg);
 }
 
 .contacts .contacts-link {
@@ -374,6 +407,48 @@ body {
   letter-spacing: var(--primary-letter-spacing);
 }
 
+/* -------------OVERLAY------------- */
+
+.overlay {
+  position: absolute;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+
+  top: 0;
+  left: 0;
+
+  transform: translate(0, 100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  width: 100%;
+  height: 100%;
+
+  padding-top: 40px;
+  padding-bottom: 164px;
+  padding-left: 36px;
+  padding-right: 36px;
+
+  /* overflow-y: scroll; */
+
+  background-color: var(--accent);
+}
+
+.Portfolio-overlay {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.Portfolio-link:hover .overlay,
+.Portfolio-link:focus .overlay {
+  transform: translate(0, 0);
+}
+
 /* team*/
 
 .team {
@@ -403,8 +478,9 @@ body {
 .team-item {
   background-color: #fff;
   text-align: center;
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-border-radius: 0px 0px 4px 4px
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team-foto {
@@ -444,14 +520,15 @@ border-radius: 0px 0px 4px 4px
   width: 16px;
 }
 
-.item:hover{
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+.item:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 /* Customers */
 
 .Customers {
-    padding-top: 120px;
+  padding-top: 120px;
   padding-bottom: 120px;
 }
 
@@ -478,7 +555,7 @@ border-radius: 0px 0px 4px 4px
 .Customers-item {
 }
 
-.Customers-color{
+.Customers-color {
   fill: rgba(142, 143, 153, 1);
 }
 
@@ -494,12 +571,10 @@ border-radius: 0px 0px 4px 4px
 .Customers-color:hover,
 .Customers-color:focus,
 .Customers-item-link:hover,
-.Customers-item-link:focus{
+.Customers-item-link:focus {
   fill: var(--accent);
   border-color: var(--accent);
 }
-
-
 
 /* FOOTER */
 
@@ -583,6 +658,58 @@ border-radius: 0px 0px 4px 4px
   height: 20px;
 }
 
-.footer-icon-background-color:hover{
+.footer-icon-background-color:hover,
+.footer-icon-background-color:focus {
   background: rgba(49, 208, 170, 1);
+}
+
+/* -----------------BACKDROP--------*/
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background: rgba(46, 47, 66, 0.4);
+}
+
+.backdrop.is-hidden{
+  opacity: 0;
+  visibility: hidden;
+  perspective: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 408px;
+  height: 576px;
+  background-color: #fcfcfc;
+}
+.modal-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  width: 24px;
+  height: 24px;
+  background: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.model-close-icon {
+  width: 8px;
+  height: 8px;
+}
+
+.model-close-icon:hover,
+.model-close-icon:focus{
+  fill: var(--accent);
 }
