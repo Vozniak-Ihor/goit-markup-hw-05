@@ -27,7 +27,7 @@ ol {
 
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -372,6 +372,8 @@ body {
   border-top: none;
   border: 0.5px #f4f4fd;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+  max-width: 360px;
+  max-height: 119px;
 }
 
 .Portfolio-gifts-title {
