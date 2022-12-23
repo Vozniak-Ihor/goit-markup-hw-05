@@ -156,8 +156,9 @@ body {
 }
 
 .nav-link-Portfolio {
-  color: var(--accent);
   position: relative;
+  display: inline-block;
+  color: var(--accent);
 }
 
 .nav-link-Portfolio::after {
