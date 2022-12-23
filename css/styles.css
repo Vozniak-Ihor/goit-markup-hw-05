@@ -143,6 +143,12 @@ body {
   color: var(--accent);
 }
 
+.nav .nav-link-Portfolio {
+  position: relative;
+  display: inline-block;
+  color: var(--accent);
+}
+
 .nav-link-studio::after {
   content: "";
   display: block;
@@ -155,11 +161,7 @@ body {
   border-radius: 2px;
 }
 
-.nav-link-Portfolio {
-  position: relative;
-  display: inline-block;
-  color: var(--accent);
-}
+
 
 .nav-link-Portfolio::after {
   content: "";
