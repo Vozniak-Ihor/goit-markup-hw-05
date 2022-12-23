@@ -102,7 +102,7 @@ body {
   align-items: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  transition: var(--transition);
+  transition: color var(--transition);
 }
 
 .header-web {
@@ -134,12 +134,13 @@ body {
   font-size: var(--primary-font-size);
   line-height: var(--primary-line-height);
   letter-spacing: var(--primary-letter-spacing);
-  transition: var(--transition);
+  transition: color var(--transition);
 }
 
-.nav-link-studio {
-  color: var(--accent);
+.nav .nav-link-studio {
   position: relative;
+  display: inline-block;
+  color: var(--accent);
 }
 
 .nav-link-studio::after {
@@ -190,7 +191,7 @@ body {
   font-size: var(--primary-font-size);
   line-height: var(--primary-line-height);
   letter-spacing: var(--primary-letter-spacing);
-  transition: var(--transition);
+  transition: color var(--transition);
 }
 
 
@@ -268,7 +269,7 @@ body {
   font-weight: var(--secondary-font-weight);
   letter-spacing: 0.04em;
   cursor: pointer;
-  transition: var(--transition);
+  transition: color var(--transition),background-color var(--transition),box-shadow var(--transition);
 }
 
 .page-buttons:hover,
@@ -291,7 +292,7 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
-  transition: background-color var(--transition);
+  transition: background-color var(--transition) ,box-shadow var(--transition);
 }
 
 .page-button:hover,
@@ -535,6 +536,10 @@ body {
   width: 16px;
 }
 
+.item{
+  transition: box-shadow var(--transition);
+}
+
 .item:hover {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -572,7 +577,7 @@ body {
 
 .Customers-color {
   fill: rgba(142, 143, 153, 1);
-  transition: var(--transition);
+  
 }
 
 .Customers-item-link {
@@ -583,7 +588,7 @@ body {
   align-items: center;
   border: 1px solid #8e8f99;
   border-radius: 4px;
-  transition: var(--transition);
+  transition:fill var(--transition), border-color var(--transition);
 }
 .Customers-color:hover,
 .Customers-color:focus,
@@ -624,7 +629,7 @@ body {
   align-items: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  transition: var(--transition);
+  transition: color var(--transition);
 }
 
 .logo-footer:hover,
@@ -670,18 +675,17 @@ body {
   height: 40px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
-  transition:background var(--transition);
 }
 .footer-icon {
   width: 24px;
   height: 20px;
 }
 .footer-icon-background-color{
- 
+ transition: background-color var(--transition);
 }
 .footer-icon-background-color:hover,
 .footer-icon-background-color:focus {
-  background: rgba(49, 208, 170, 1);
+  background-color: rgba(49, 208, 170, 1);
 }
 
 /* -----------------BACKDROP--------*/
